@@ -1,47 +1,3 @@
-@charset "UTF-8";
-nav {
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  z-index: 2;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-nav ul li {
-  display: inline-block;
-  list-style: none;
-  margin: 0 10px;
-  position: relative;
-}
-nav ul li a {
-  text-decoration: none;
-  color: #4a4a6a;
-  font-size: 0.8rem;
-  font-weight: normal;
-}
-
-nav ul li::after {
-  content: "";
-  height: 3px;
-  width: 0;
-  background: #271fe0;
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  transition: 0.5s;
-}
-
-nav ul li:hover::after {
-  width: 100%;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -69,16 +25,16 @@ header {
 }
 
 .invierte {
-  color: #271fe0;
+  color: $primary-blue;
 }
 
 .top_button {
   text-decoration: none !important;
   border-radius: 50px;
-  border: 2px solid #271fe0;
+  border: 2px solid $primary-blue;
   margin: 0 8px;
   padding: 8px 20px;
-  background: #271fe0;
+  background: $primary-blue;
   color: #ffffff;
   cursor: pointer;
   font-size: 0.8rem;
@@ -86,12 +42,12 @@ header {
 
 .login_button {
   background: transparent;
-  color: #271fe0;
+  color: $primary-blue;
   transition: 0.5s;
 }
 
 .top_button:hover {
-  background: #271fe0;
+  background: $primary-blue;
   color: #ffffff !important;
 }
 
@@ -117,8 +73,8 @@ header {
   cursor: pointer;
   margin: 20px 10px;
   padding: 10px 20px;
-  color: #271fe0;
-  border: 0.5px solid #271fe0;
+  color: $primary-blue;
+  border: 0.5px solid $primary-blue;
   position: relative;
   transition: color 0.5s;
   z-index: 0;
@@ -126,7 +82,7 @@ header {
 }
 
 .hero_button a {
-  color: #271fe0;
+  color: $primary-blue;
 }
 
 .hero_button:hover {
@@ -140,7 +96,7 @@ header {
   left: 0;
   height: 0;
   width: 100%;
-  background: linear-gradient(to bottom, #7d70f0, #271fe0);
+  background: linear-gradient(to bottom, #7d70f0, $primary-blue);
   z-index: -1;
   /* border-radius: 0 0 50% 50%; */
   transition: all 0.5s;
@@ -165,6 +121,7 @@ header {
     transform: translateX(0px);
   }
 }
+
 .container {
   width: 80%;
   margin: 0rem auto;
@@ -179,7 +136,7 @@ header {
 }
 
 .boton {
-  background-color: #271fe0;
+  background-color: $primary-blue;
   color: #ffffff;
   text-decoration: none;
   border-style: none;
@@ -192,7 +149,7 @@ header {
   background-color: #ffffff;
   text-decoration: none;
   border-radius: 4px;
-  color: #271fe0;
+  color: $primary-blue;
 }
 
 .boton_secundario_banner {
@@ -221,11 +178,11 @@ h4 {
 }
 
 .titulo_secundario_main_blue {
-  color: #271fe0;
+  color: $primary-blue;
 }
 
 .container_banner {
-  background-color: #271fe0;
+  background-color: $primary-blue;
   color: #ffffff;
   padding: 2.5rem 0;
 }
@@ -390,8 +347,8 @@ tr:hover {
   margin: 10rem 1rem;
 }
 
-input[type=text],
-input[type=password],
+input[type="text"],
+input[type="password"],
 select {
   width: 100%;
   padding: 12px 20px;
@@ -407,9 +364,9 @@ textarea {
   border-radius: 4px;
 }
 
-input[type=button],
-input[type=submit],
-input[type=reset] {
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
   border: none;
   color: white;
   padding: 0.5rem 32px;
@@ -446,7 +403,7 @@ fieldset {
 
 .boton_signup_signin {
   margin-top: 1rem;
-  background-color: #271fe0;
+  background-color: $primary-blue;
   text-align: center;
   color: #ffffff;
   border-radius: 4px;
@@ -622,7 +579,7 @@ fieldset {
 }
 
 .teamTitle {
-  color: #271fe0;
+  color: $primary-blue;
   margin-bottom: 18px;
   text-align: center;
   font-weight: 400;
@@ -635,9 +592,13 @@ fieldset {
 
 .grid_plataforma {
   display: grid;
-  grid-template-areas: "imagen_plataforma funcionalidad1 funcionalidad2" "imagen_plataforma funcionalidad3 funcionalidad4";
+  grid-template-areas:
+    "imagen_plataforma funcionalidad1 funcionalidad2"
+    "imagen_plataforma funcionalidad3 funcionalidad4";
+
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
+
   grid-column-gap: 20px;
   align-content: center;
   justify-content: center;
@@ -658,6 +619,7 @@ fieldset {
   padding: 5px;
   border: 1px solid #dcdce4;
   border-radius: 4px;
+
   transition: 1s;
 }
 
@@ -667,43 +629,27 @@ fieldset {
 }
 
 /*aplicación de bucle*/
-.grid_plataforma_item1 {
-  grid-area: funcionalidad1;
-}
+$i: 1;
 
-.grid_plataforma_item1:hover {
-  box-shadow: 0px 0px 10px #271fe0;
-}
+@for $i from 1 through 4 {
+  .grid_plataforma_item#{$i} {
+    grid-area: funcionalidad#{$i};
+  }
 
-.grid_plataforma_item2 {
-  grid-area: funcionalidad2;
-}
-
-.grid_plataforma_item2:hover {
-  box-shadow: 0px 0px 10px #271fe0;
-}
-
-.grid_plataforma_item3 {
-  grid-area: funcionalidad3;
-}
-
-.grid_plataforma_item3:hover {
-  box-shadow: 0px 0px 10px #271fe0;
-}
-
-.grid_plataforma_item4 {
-  grid-area: funcionalidad4;
-}
-
-.grid_plataforma_item4:hover {
-  box-shadow: 0px 0px 10px #271fe0;
+  .grid_plataforma_item#{$i}:hover {
+    box-shadow: 0px 0px 10px $primary-blue;
+  }
 }
 
 .grid_signup {
   display: grid;
-  grid-template-areas: "signup signin" "signup signup_img";
+  grid-template-areas:
+    "signup signin"
+    "signup signup_img";
+
   grid-template-rows: 1fr 2fr;
   grid-template-columns: 1fr 1fr;
+
   grid-column-gap: 20px;
   align-content: center;
   justify-content: center;
@@ -712,12 +658,10 @@ fieldset {
 .formulario_signup {
   grid-area: signup;
 }
-
 .formulario_signup_signin {
   grid-area: signin;
   height: 150px;
 }
-
 .signup_signin_img {
   grid-area: signup_img;
   align-self: flex-start;
@@ -736,26 +680,3 @@ fieldset {
   left: 10%;
   z-index: -1;
 }
-
-footer {
-  background: linear-gradient(90deg, #000000 0%, #271fe0 50%, #000000 100%);
-  padding: 1rem;
-}
-
-.nav__list_footer {
-  list-style: none;
-}
-
-.footer__link {
-  text-decoration: none;
-  font-size: 0.8rem;
-  color: #ffffff;
-}
-
-.footer_sec {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/*# sourceMappingURL=style.css.map */

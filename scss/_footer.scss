@@ -1,0 +1,20 @@
+footer {
+  background: linear-gradient(90deg, #000000 0%, #271fe0 50%, #000000 100%);
+  padding: 1rem;
+}
+
+.nav__list_footer {
+  list-style: none;
+}
+
+.footer__link {
+  text-decoration: none;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+
+.footer_sec {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
