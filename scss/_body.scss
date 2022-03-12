@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background-color: #ffffff;
+  background-color: $neutral-0;
   position: sticky;
   top: 0;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
@@ -35,7 +35,7 @@ header {
   margin: 0 8px;
   padding: 8px 20px;
   background: $primary-blue;
-  color: #ffffff;
+  color: $neutral-0;
   cursor: pointer;
   font-size: 0.8rem;
 }
@@ -48,11 +48,11 @@ header {
 
 .top_button:hover {
   background: $primary-blue;
-  color: #ffffff !important;
+  color: $neutral-0 !important;
 }
 
 .hero {
-  background: #ffffff;
+  background: $neutral-0;
 }
 
 .hero_text {
@@ -62,13 +62,13 @@ header {
 .hero_text_main {
   text-transform: capitalize;
   font-size: 4rem;
-  color: #212134;
+  color: $neutral-900;
 }
 
 .hero_button {
   width: 150px;
   text-decoration: none;
-  background: #ffffff;
+  background: $neutral-0;
   border-radius: 50px;
   cursor: pointer;
   margin: 20px 10px;
@@ -86,7 +86,7 @@ header {
 }
 
 .hero_button:hover {
-  color: #ffffff;
+  color: $neutral-0;
 }
 
 .hero_button:before {
@@ -96,7 +96,7 @@ header {
   left: 0;
   height: 0;
   width: 100%;
-  background: linear-gradient(to bottom, #7d70f0, $primary-blue);
+  background: linear-gradient(to bottom, $primary-500, $primary-blue);
   z-index: -1;
   /* border-radius: 0 0 50% 50%; */
   transition: all 0.5s;
@@ -128,7 +128,7 @@ header {
 }
 
 .fondo {
-  background-color: #f6f6f9;
+  background-color: $neutral-100;
 }
 
 .fondo_hero {
@@ -137,7 +137,7 @@ header {
 
 .boton {
   background-color: $primary-blue;
-  color: #ffffff;
+  color: $neutral-0;
   text-decoration: none;
   border-style: none;
   border-radius: 4px;
@@ -146,7 +146,7 @@ header {
 }
 
 .boton_secundario {
-  background-color: #ffffff;
+  background-color: $neutral-0;
   text-decoration: none;
   border-radius: 4px;
   color: $primary-blue;
@@ -157,19 +157,19 @@ header {
 }
 
 .plataforma {
-  background-color: #ffffff;
+  background-color: $neutral-0;
   padding-bottom: 2rem;
 }
 
 h1 {
-  color: #212134;
+  color: $neutral-900;
   font-size: 3rem;
 }
 
 h2,
 h3,
 h4 {
-  color: #4a4a6a;
+  color: $neutral-700;
 }
 
 .titulo_secundario_main {
@@ -183,7 +183,7 @@ h4 {
 
 .container_banner {
   background-color: $primary-blue;
-  color: #ffffff;
+  color: $neutral-0;
   padding: 2.5rem 0;
 }
 
@@ -195,11 +195,11 @@ h4 {
 }
 
 form {
-  background-color: #ffffff;
+  background-color: $neutral-0;
 }
 
 input {
-  background-color: #f0f0ff;
+  background-color: $primary-100;
 }
 
 table {
@@ -207,25 +207,25 @@ table {
 }
 
 th {
-  background-color: #7b79ff;
-  color: #ffffff;
+  background-color: $primary-500;
+  color: $neutral-0;
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #8e8ea9;
+  border-bottom: 1px solid $neutral-500;
 }
 
 td {
   padding: 8px;
   text-align: left;
-  border-bottom: 1px solid #8e8ea9;
+  border-bottom: 1px solid $neutral-500;
 }
 
 tr {
-  background-color: #ffffff;
+  background-color: $neutral-0;
 }
 
 tr:hover {
-  background-color: #f0f0ff;
+  background-color: $primary-100;
 }
 
 .img_footer {
@@ -238,8 +238,8 @@ tr:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f0f0ff;
-  border: 6px solid #ffffff;
+  background-color: $primary-100;
+  border: 6px solid $neutral-0;
   padding: 1rem;
   margin-bottom: 1rem;
   max-width: 250px;
@@ -259,7 +259,7 @@ tr:hover {
   text-align: center;
   margin: 1rem;
   font-weight: bold;
-  color: #4a4a6a;
+  color: $neutral-700;
 }
 
 .testimonio_text {
@@ -275,8 +275,8 @@ tr:hover {
 }
 
 .bordes {
-  background: #ffffff;
-  border: 0.5px solid #eaeaef;
+  background: $neutral-0;
+  border: 0.5px solid $neutral-150;
 }
 
 .bordes--principal {
@@ -299,8 +299,8 @@ tr:hover {
 .plataforma_feature {
   width: 200px;
   margin: 1rem;
-  background: #ffffff;
-  border: 0.5px solid #eaeaef;
+  background: $neutral-0;
+  border: 0.5px solid $neutral-150;
   padding: 1rem;
 }
 
@@ -325,25 +325,25 @@ tr:hover {
 
 .formulario_signup {
   padding: 2rem 2rem;
-  background-color: #ffffff;
+  background-color: $neutral-0;
   width: 450px;
-  border: 0.5px solid #eaeaef;
+  border: 0.5px solid $neutral-150;
   margin: 3rem 1rem;
 }
 
 .formulario_signup_signin {
   padding: 2rem 2rem;
-  background-color: #ffffff;
+  background-color: $neutral-0;
   width: 350px;
-  border: 0.5px solid #eaeaef;
+  border: 0.5px solid $neutral-150;
   margin: 3rem 1rem;
 }
 
 .formulario_login {
   padding: 2rem 2rem;
-  background-color: #ffffff;
+  background-color: $neutral-0;
   width: 400px;
-  border: 0.5px solid #eaeaef;
+  border: 0.5px solid $neutral-150;
   margin: 10rem 1rem;
 }
 
@@ -354,13 +354,13 @@ select {
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #dcdce4;
+  border: 1px solid $neutral-200;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: $neutral-0;
 }
 
 textarea {
-  border: 1px solid #dcdce4;
+  border: 1px solid $neutral-200;
   border-radius: 4px;
 }
 
@@ -368,7 +368,7 @@ input[type="button"],
 input[type="submit"],
 input[type="reset"] {
   border: none;
-  color: white;
+  color: $neutral-0;
   padding: 0.5rem 32px;
   text-decoration: none;
   margin: 4px 2px;
@@ -405,18 +405,18 @@ fieldset {
   margin-top: 1rem;
   background-color: $primary-blue;
   text-align: center;
-  color: #ffffff;
+  color: $neutral-0;
   border-radius: 4px;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   font-size: 1rem;
-  color: #ffffff;
+  color: $neutral-0;
   text-decoration: none;
   border-style: none;
 }
 
 .inv_det_card {
-  background: #ffffff;
+  background: $neutral-0;
   box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);
   border-radius: 4px;
   width: 40%;
@@ -425,7 +425,7 @@ fieldset {
 }
 
 .inv_det_card:hover {
-  background: #f0f0ff;
+  background: $primary-100;
   transform: scale(1.05, 1.05);
 }
 
@@ -453,7 +453,7 @@ fieldset {
 
 .row_inv {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 2rem;
 }
@@ -461,7 +461,7 @@ fieldset {
 .row_inv_rev {
   display: flex;
   flex-direction: row-reverse;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   margin: 2rem;
 }
@@ -527,15 +527,15 @@ fieldset {
 
 .contacto {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 .datos_empresa {
   padding: 2rem 2rem;
-  background-color: #ffffff;
+  background-color: $neutral-0;
   width: 375px;
   height: 600px;
-  border: 0.5px solid #eaeaef;
+  border: 0.5px solid $neutral-150;
   margin: 3rem 1rem;
 }
 
@@ -550,7 +550,7 @@ fieldset {
   padding: 2rem 2rem;
   background: rgba(215, 215, 223, 0.9);
   width: 40%;
-  border: 0.5px solid #eaeaef;
+  border: 0.5px solid $neutral-150;
 }
 
 .team_cards {
@@ -617,7 +617,7 @@ fieldset {
   align-items: center;
   margin: 10px;
   padding: 5px;
-  border: 1px solid #dcdce4;
+  border: 1px solid $neutral-200;
   border-radius: 4px;
 
   transition: 1s;
@@ -625,7 +625,6 @@ fieldset {
 
 .grid_plataforma_items:hover {
   background: #d8d8e283;
-  /* color: #ffffff; */
 }
 
 /*aplicación de bucle*/
@@ -648,10 +647,9 @@ $i: 1;
     "signup signup_img";
 
   grid-template-rows: 1fr 2fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
 
   grid-column-gap: 20px;
-  align-content: center;
   justify-content: center;
 }
 
