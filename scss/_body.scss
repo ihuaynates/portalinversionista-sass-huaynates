@@ -326,7 +326,7 @@ tr:hover {
   padding: 2rem 1rem;
   background-color: $neutral-0;
   border: 0.5px solid $neutral-150;
-  margin: 5rem 0rem;
+  margin: 3rem 0rem;
 }
 
 input[type="text"],
@@ -425,10 +425,11 @@ fieldset {
 }
 
 .login_img {
-  visibility: hidden;
-  position: absolute;
-  width: 1px;
-  height: 1px;
+  //visibility: hidden;
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 3rem;
 }
 
 .row {
