@@ -28,29 +28,6 @@ header {
   color: $primary-blue;
 }
 
-.top_button {
-  text-decoration: none !important;
-  border-radius: 50px;
-  border: 2px solid $primary-blue;
-  margin: 0 8px;
-  padding: 8px 20px;
-  background: $primary-blue;
-  color: $neutral-0;
-  cursor: pointer;
-  font-size: 0.8rem;
-}
-
-.login_button {
-  background: transparent;
-  color: $primary-blue;
-  transition: 0.5s;
-}
-
-.top_button:hover {
-  background: $primary-blue;
-  color: $neutral-0 !important;
-}
-
 .hero {
   background: $neutral-0;
 }
@@ -106,8 +83,17 @@ header {
   height: 120%;
 }
 
-.img_hero {
-  width: 550px;
+.cuadrado {
+  width: 15px;
+  height: 15px;
+  background: #271fe0;
+  display: inline-block;
+  margin: 15px 0;
+}
+
+.img_index {
+  width: 100%;
+  height: auto;
   animation: from-right 1.5s ease;
 }
 
@@ -123,7 +109,7 @@ header {
 }
 
 .container {
-  width: 80%;
+  width: 90%;
   margin: 0rem auto;
 }
 
@@ -184,13 +170,13 @@ h4 {
 .container_banner {
   background-color: $primary-blue;
   color: $neutral-0;
-  padding: 2.5rem 0;
+  padding: 1rem 0;
 }
 
 .banner {
   width: 80%;
   margin: 0 auto;
-  font-size: x-large;
+  font-size: large;
   font-weight: bold;
 }
 
@@ -242,7 +228,6 @@ tr:hover {
   border: 6px solid $neutral-0;
   padding: 1rem;
   margin-bottom: 1rem;
-  max-width: 250px;
   border-radius: 4px;
   transition: 0.5s;
 }
@@ -280,7 +265,6 @@ tr:hover {
 }
 
 .bordes--principal {
-  width: 40%;
   margin: 0.2rem;
   padding: 1rem;
   display: flex;
@@ -314,7 +298,7 @@ tr:hover {
 }
 
 .titulo_secundario {
-  width: 60%;
+  width: 90%;
   text-align: center;
   margin: 2rem auto;
 }
@@ -324,27 +308,25 @@ tr:hover {
 }
 
 .formulario_signup {
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
   background-color: $neutral-0;
-  width: 450px;
   border: 0.5px solid $neutral-150;
-  margin: 3rem 1rem;
+  margin: 1rem 0rem;
 }
 
 .formulario_signup_signin {
-  padding: 2rem 2rem;
+  padding: 1rem 1rem;
   background-color: $neutral-0;
-  width: 350px;
   border: 0.5px solid $neutral-150;
-  margin: 3rem 1rem;
+  margin: 2rem 0rem;
+  grid-area: signin;
 }
 
 .formulario_login {
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   background-color: $neutral-0;
-  width: 400px;
   border: 0.5px solid $neutral-150;
-  margin: 10rem 1rem;
+  margin: 5rem 0rem;
 }
 
 input[type="text"],
@@ -419,7 +401,8 @@ fieldset {
   background: $neutral-0;
   box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);
   border-radius: 4px;
-  width: 40%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   padding: 1rem;
   transition: 0.5s;
 }
@@ -434,62 +417,35 @@ fieldset {
   padding-bottom: 1rem;
 }
 
-.login {
-  display: flex;
-  justify-content: space-around;
-  align-content: center;
-  align-items: center;
+.img_funcionalidades {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .login_img {
-  width: 500px;
+  visibility: hidden;
+  position: absolute;
+  width: 1px;
+  height: 1px;
 }
 
 .row {
-  display: flex;
-  justify-content: space-around;
-  padding: 1rem;
-}
-
-.row_inv {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  margin: 2rem;
-}
-
-.row_inv_rev {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-around;
-  align-items: center;
-  margin: 2rem;
+  padding-bottom: 1rem;
 }
 
 .container_main {
-  display: flex;
-  align-items: center;
-  padding: 2rem;
-  justify-content: space-between;
   background-color: rgba(255, 255, 255, 0.7);
   margin-top: 2rem;
+  padding: 1rem;
   box-shadow: 0px 1px 4px rgba(33, 33, 52, 0.1);
   border-radius: 4px;
 }
 
-.container_main_text {
-  padding-right: 2rem;
-}
-
-.container_main_hero {
-  display: flex;
-  align-items: center;
-  padding: 4rem 0.5rem;
-  justify-content: space-between;
-}
-
 .main_img {
-  width: 450px;
+  width: 100%;
+  height: auto;
 }
 
 .banner_sec {
@@ -501,6 +457,7 @@ fieldset {
 }
 
 .signup_signin_img {
+  visibility: hidden;
   width: 450px;
 }
 
@@ -525,18 +482,11 @@ fieldset {
   align-items: center;
 }
 
-.contacto {
-  display: flex;
-  justify-content: center;
-}
-
 .datos_empresa {
-  padding: 2rem 2rem;
+  padding: 2rem 1rem;
   background-color: $neutral-0;
-  width: 375px;
-  height: 600px;
   border: 0.5px solid $neutral-150;
-  margin: 3rem 1rem;
+  margin: 1rem 0rem;
 }
 
 .nuestro_equipo {
@@ -548,14 +498,8 @@ fieldset {
 
 .nuestro_equipo_card {
   padding: 2rem 2rem;
-  background: rgba(215, 215, 223, 0.9);
-  width: 40%;
+  background: rgba(215, 215, 223, 0.8);
   border: 0.5px solid $neutral-150;
-}
-
-.team_cards {
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .team_card {
@@ -590,21 +534,9 @@ fieldset {
   border-radius: 50%;
 }
 
-.grid_plataforma {
-  display: grid;
-  grid-template-areas:
-    "imagen_plataforma funcionalidad1 funcionalidad2"
-    "imagen_plataforma funcionalidad3 funcionalidad4";
-
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr 1fr;
-
-  grid-column-gap: 20px;
-  align-content: center;
-  justify-content: center;
-}
-
 .grid_plataforma_img {
+  width: 100%;
+  height: auto;
   grid-area: imagen_plataforma;
   align-self: center;
   justify-self: center;
@@ -640,29 +572,23 @@ $i: 1;
   }
 }
 
-.grid_signup {
-  display: grid;
-  grid-template-areas:
-    "signup signin"
-    "signup signup_img";
-
-  grid-template-rows: 1fr 2fr;
-  grid-template-columns: auto auto;
-
-  grid-column-gap: 20px;
-  justify-content: center;
-}
-
 .formulario_signup {
   grid-area: signup;
 }
-.formulario_signup_signin {
-  grid-area: signin;
-  height: 150px;
-}
+
 .signup_signin_img {
   grid-area: signup_img;
-  align-self: flex-start;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+}
+
+textarea {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  resize: vertical;
 }
 
 .row_inv .circle {
@@ -677,4 +603,175 @@ $i: 1;
   position: absolute;
   left: 10%;
   z-index: -1;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 80%;
+    margin: 0rem auto;
+  }
+
+  .container_main_hero {
+    display: flex;
+    align-items: center;
+    padding: 4rem 0.5rem;
+    justify-content: space-between;
+  }
+
+  .titulo_secundario {
+    width: 60%;
+    text-align: center;
+    margin: 2rem auto;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  .bordes--principal {
+    width: 40%;
+  }
+
+  .grid_plataforma {
+    display: grid;
+    grid-template-areas:
+      "imagen_plataforma funcionalidad1 funcionalidad2"
+      "imagen_plataforma funcionalidad3 funcionalidad4";
+
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    grid-column-gap: 20px;
+    align-content: center;
+    justify-content: center;
+  }
+
+  .container_banner {
+    padding: 2.5rem 0;
+  }
+
+  .banner {
+    font-size: x-large;
+  }
+
+  .testimonio_card {
+    max-width: 250px;
+  }
+
+  .container_main {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    justify-content: space-between;
+  }
+
+  .container_main_text {
+    padding-right: 2rem;
+  }
+
+  .main_img {
+    width: 300px;
+    height: auto;
+  }
+
+  .row_inv {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  .row_inv_rev {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2rem;
+  }
+
+  .inv_det_card {
+    width: 40%;
+  }
+
+  .nuestro_equipo_card {
+    width: 40%;
+  }
+
+  .team_cards {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  .contacto {
+    display: flex;
+    justify-content: center;
+  }
+
+  .formulario_signup {
+    padding: 2rem 2rem;
+    background-color: $neutral-0;
+    width: 450px;
+    border: 0.5px solid $neutral-150;
+    margin: 3rem 1rem;
+  }
+
+  .datos_empresa {
+    padding: 2rem 2rem;
+    background-color: $neutral-0;
+    width: 375px;
+    height: 600px;
+    border: 0.5px solid $neutral-150;
+    margin: 3rem 1rem;
+  }
+
+  .login {
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    align-items: center;
+  }
+
+  .formulario_login {
+    padding: 2rem 2rem;
+    background-color: $neutral-0;
+    width: 400px;
+    border: 0.5px solid $neutral-150;
+    margin: 10rem 1rem;
+  }
+
+  .login_img {
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .grid_signup {
+    display: grid;
+    grid-template-areas:
+      "signup signin"
+      "signup signup_img";
+
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: auto auto;
+
+    grid-column-gap: 20px;
+    justify-content: center;
+  }
+
+  .signup_signin_img {
+    visibility: visible;
+    width: 100%;
+    height: auto;
+    position: relative;
+  }
+
+  .formulario_signup_signin {
+    padding: 2rem 2rem;
+    width: 350px;
+    margin: 3rem 1rem;
+    height: 150px;
+  }
 }

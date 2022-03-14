@@ -1,46 +1,206 @@
 nav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   z-index: 2;
-}
-
-.menu {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 nav {
   ul {
     li {
-      display: inline-block;
       list-style: none;
-      margin: 0 10px;
+      margin: 0 5px;
       position: relative;
       a {
         text-decoration: none;
         color: #4a4a6a;
-        font-size: 0.8rem;
+        font-size: 1rem;
         font-weight: normal;
       }
     }
   }
 }
 
-nav ul li::after {
-  content: "";
-  height: 3px;
-  width: 0;
-  background: $primary-blue;
+.row {
+  padding: 1rem;
+}
+
+.menu {
+  width: 100%;
+  visibility: hidden;
+  height: 0;
   position: absolute;
-  left: 0;
-  bottom: -10px;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.nav-toggle {
+  cursor: pointer;
+  border: 2px solid rgba(134, 133, 139, 0.5);
+  width: 3rem;
+  height: 3rem;
+  padding: 0em;
+  border-radius: 0.25rem;
+  background-color: transparent;
+  transition: opacity 250ms ease;
+  position: absolute;
+  right: 10px;
+  top: 30px;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.9;
+}
+
+.hamburger {
+  width: 70%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 4px;
+  background: $primary-blue;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-8px);
+}
+
+.hamburger::after {
+  transform: translateY(5px);
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  position: relative;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.top_button {
+  text-decoration: none !important;
+  border-radius: 50px;
+  border: 1px solid $primary-blue;
+  margin: 10px 0px;
+  padding: 4px 20px;
+  background: $primary-blue;
+  color: $neutral-0;
+  cursor: pointer;
+  font-size: 0.8rem;
+}
+
+.login_button {
+  background: transparent;
+  color: $primary-blue;
   transition: 0.5s;
 }
 
-nav ul li:hover::after {
-  width: 100%;
+.top_button:hover {
+  background: $primary-blue;
+  color: $neutral-0 !important;
+}
+
+@media (min-width: 768px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  nav {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+  }
+
+  nav {
+    ul {
+      li {
+        display: inline-block;
+        list-style: none;
+        margin: 0 10px;
+        position: relative;
+        a {
+          text-decoration: none;
+          color: #4a4a6a;
+          font-size: 0.8rem;
+          font-weight: normal;
+        }
+      }
+    }
+  }
+
+  .menu {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    position: relative;
+    font-size: 1rem;
+  }
+
+  .nav__list {
+    display: flex;
+    margin: 0;
+  }
+
+  .nav__item::after {
+    content: "";
+    height: 3px;
+    width: 0;
+    background: $primary-blue;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+  }
+
+  .nav__item:hover::after {
+    width: 100%;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .top_button {
+    text-decoration: none !important;
+    border-radius: 50px;
+    border: 2px solid $primary-blue;
+    margin: 0 8px;
+    padding: 8px 20px;
+    background: $primary-blue;
+    color: $neutral-0;
+    cursor: pointer;
+    font-size: 0.8rem;
+  }
+
+  .login_button {
+    background: transparent;
+    color: $primary-blue;
+    transition: 0.5s;
+  }
+
+  .top_button:hover {
+    background: $primary-blue;
+    color: $neutral-0 !important;
+  }
 }

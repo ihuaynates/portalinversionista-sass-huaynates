@@ -24,35 +24,38 @@
   <body class="fondo">
     <header>
       <div class="container">
-        <nav>
+        <div class="row">
+          <button class="nav-toggle" aria-label="abrir navegacion">
+            <span class="hamburger"></span>
+          </button>
           <a href="index.html"><img src="images/logo_letras.svg" alt="" /></a>
-          <div class="menu">
-            <ul class="nav__list">
-              <li><a href="index.html" class="nav__link">Inicio</a></li>
-              <li>
+          <nav class="menu">
+            <ul class="nav__list nav__list--primary">
+              <li class="nav__item">
+                <a href="index.html" class="nav__link">Inicio</a>
+              </li>
+              <li class="nav__item">
                 <a href="inversionistas.html" class="nav__link"
                   >Inversionistas</a
                 >
               </li>
-              <li>
+              <li class="nav__item">
                 <a href="empresas.html" class="nav__link">Empresas</a>
               </li>
-              <li>
+              <li class="nav__item">
                 <a href="conocenos.html" class="nav__link">Conócenos</a>
               </li>
-              <!-- <li>
-              <a href="signin.html" class="top_button login_button"> Iniciar Sesión </a>
-            </li> 
-            <li>
-              <a href="signup.html" class="top_button"> Regístrate </a>
-            </li>  -->
+              <li>
+                <a href="signin.html" class="top_button login_button">
+                  Iniciar Sesión
+                </a>
+              </li>
+              <li>
+                <a href="signup.html" class="top_button"> Regístrate </a>
+              </li>
             </ul>
-            <a href="signin.html" class="top_button login_button">
-              Iniciar Sesión
-            </a>
-            <a href="signup.html" class="top_button"> Regístrate </a>
-          </div>
-        </nav>
+          </nav>
+        </div>
       </div>
     </header>
 
@@ -116,7 +119,7 @@
                 <a href="signin.html" class="boton">Iniciar Sesión</a>
               </p>
             </div>
-            <div class="signup_signin_img">
+            <div>
               <img
                 src="images/signup.svg"
                 alt="persona logueandose en el sistema"
@@ -152,5 +155,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/main.js"></script>
   </body>
 </html>
