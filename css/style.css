@@ -22,7 +22,6 @@ nav ul li a {
 }
 
 .menu {
-  width: 100%;
   visibility: hidden;
   height: 0;
   position: absolute;
